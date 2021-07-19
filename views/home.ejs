@@ -1,0 +1,17 @@
+<%-include("partials/header")-%>
+
+
+<h1>Home</h1>
+
+<p><%= ejsHomeContent %></p>
+
+
+
+
+<% ejspost.forEach(function(object){ %>
+    <h1><%= object.title %></h1>
+    <p><%= object.post.substring(0,100) + "..." %></p>
+    <a href="posts/<%= object.title %>">Read More</a>
+<% }); %>
+
+<%-include("partials/footer")-%>
